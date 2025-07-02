@@ -1,285 +1,539 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website Development Project Proposal</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .feature-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
-        .timeline-item { position: relative; }
-        .timeline-item::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 2px; background: #e5e7eb; }
-        .timeline-dot { position: relative; z-index: 1; }
-        .tech-badge { background: linear-gradient(45deg, #4f46e5, #7c3aed); }
-        .pricing-card { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); }
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      .feature-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      .timeline-item {
+        position: relative;
+      }
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #e5e7eb;
+      }
+      .timeline-dot {
+        position: relative;
+        z-index: 1;
+      }
+      .tech-badge {
+        background: linear-gradient(45deg, #4f46e5, #7c3aed);
+      }
+      .pricing-card {
+        background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      }
     </style>
-</head>
-<body class="bg-gray-50">
+  </head>
+  <body class="bg-gray-50">
     <!-- Header -->
     <header class="gradient-bg text-white py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-5xl font-bold mb-6">Website Development Project</h1>
-            <p class="text-xl opacity-90 max-w-3xl mx-auto">Complete solution for Blog Management, Class Scheduling & PDF Sales with Payment Integration</p>
-        </div>
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-5xl font-bold mb-6">Navy Custom Web App Project</h1>
+        <p class="text-xl opacity-90 max-w-3xl mx-auto">
+          Complete solution for Blog Management, Class Scheduling & PDF Sales
+          with Payment Integration
+        </p>
+      </div>
     </header>
 
     <!-- Project Overview -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">What We're Building</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">A comprehensive website with three powerful modules designed to manage content, schedule classes, and sell digital products</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Blog Module -->
-                <div class="feature-card bg-white rounded-xl shadow-lg p-8 border border-gray-100">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Blog Management</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>✓ Rich Text Editor</li>
-                        <li>✓ Media Upload System</li>
-                        <li>✓ Category & Tags</li>
-                        <li>✓ SEO Optimization</li>
-                        <li>✓ Admin Dashboard</li>
-                        <li>✓ Mobile Responsive</li>
-                    </ul>
-                </div>
-
-                <!-- Class Scheduling -->
-                <div class="feature-card bg-white rounded-xl shadow-lg p-8 border border-gray-100">
-                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Class Scheduling</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>✓ Interactive Calendar</li>
-                        <li>✓ Class Registration</li>
-                        <li>✓ Email Reminders</li>
-                        <li>✓ Participant Management</li>
-                        <li>✓ Class Details Pages</li>
-                        <li>✓ Admin Controls</li>
-                    </ul>
-                </div>
-
-                <!-- PDF Sales -->
-                <div class="feature-card bg-white rounded-xl shadow-lg p-8 border border-gray-100">
-                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">PDF Sales & Downloads</h3>
-                    <ul class="text-gray-600 space-y-2">
-                        <li>✓ Razorpay Payment Gateway</li>
-                        <li>✓ Secure PDF Downloads</li>
-                        <li>✓ Purchase History</li>
-                        <li>✓ Product Catalog</li>
-                        <li>✓ Automated Receipts</li>
-                        <li>✓ Digital Product Management</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-800 mb-4">
+            What We're Building
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            A comprehensive website with three powerful modules designed to
+            manage content, schedule classes, and sell digital products
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Blog Module -->
+          <div
+            class="feature-card bg-white rounded-xl shadow-lg p-8 border border-gray-100"
+          >
+            <div
+              class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <svg
+                class="w-8 h-8 text-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">
+              Blog Management
+            </h3>
+            <ul class="text-gray-600 space-y-2">
+              <li>✓ Rich Text Editor</li>
+              <li>✓ Media Upload System</li>
+              <li>✓ Category & Tags</li>
+              <li>✓ SEO Optimization</li>
+              <li>✓ Admin Dashboard</li>
+              <li>✓ Mobile Responsive</li>
+            </ul>
+          </div>
+
+          <!-- Class Scheduling -->
+          <div
+            class="feature-card bg-white rounded-xl shadow-lg p-8 border border-gray-100"
+          >
+            <div
+              class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <svg
+                class="w-8 h-8 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">
+              Class Scheduling
+            </h3>
+            <ul class="text-gray-600 space-y-2">
+              <li>✓ Interactive Calendar</li>
+              <li>✓ Class Registration</li>
+              <li>✓ Email Reminders</li>
+              <li>✓ Participant Management</li>
+              <li>✓ Class Details Pages</li>
+              <li>✓ Admin Controls</li>
+            </ul>
+          </div>
+
+          <!-- PDF Sales -->
+          <div
+            class="feature-card bg-white rounded-xl shadow-lg p-8 border border-gray-100"
+          >
+            <div
+              class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <svg
+                class="w-8 h-8 text-purple-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">
+              PDF Sales & Downloads
+            </h3>
+            <ul class="text-gray-600 space-y-2">
+              <li>✓ Razorpay Payment Gateway</li>
+              <li>✓ Secure PDF Downloads</li>
+              <li>✓ Purchase History</li>
+              <li>✓ Product Catalog</li>
+              <li>✓ Automated Receipts</li>
+              <li>✓ Digital Product Management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Tech Stack -->
     <section class="py-16 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Technology Stack</h2>
-                <p class="text-lg text-gray-600">Modern, scalable technologies for optimal performance</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white rounded-lg p-6 text-center shadow-md">
-                    <div class="tech-badge text-white px-4 py-2 rounded-full text-sm font-medium mb-3 inline-block">Frontend</div>
-                    <h3 class="font-semibold text-gray-800 mb-2">Next.js</h3>
-                    <p class="text-gray-600 text-sm">React-based full-stack framework</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 text-center shadow-md">
-                    <div class="tech-badge text-white px-4 py-2 rounded-full text-sm font-medium mb-3 inline-block">Styling</div>
-                    <h3 class="font-semibold text-gray-800 mb-2">Tailwind CSS</h3>
-                    <p class="text-gray-600 text-sm">Utility-first CSS framework</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 text-center shadow-md">
-                    <div class="tech-badge text-white px-4 py-2 rounded-full text-sm font-medium mb-3 inline-block">Database</div>
-                    <h3 class="font-semibold text-gray-800 mb-2">MySQL + Prisma</h3>
-                    <p class="text-gray-600 text-sm">Reliable database with modern ORM</p>
-                </div>
-                <div class="bg-white rounded-lg p-6 text-center shadow-md">
-                    <div class="tech-badge text-white px-4 py-2 rounded-full text-sm font-medium mb-3 inline-block">Payments</div>
-                    <h3 class="font-semibold text-gray-800 mb-2">Razorpay</h3>
-                    <p class="text-gray-600 text-sm">Secure payment processing</p>
-                </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-800 mb-4">
+            Technology Stack
+          </h2>
+          <p class="text-lg text-gray-600">
+            Modern, scalable technologies for optimal performance
+          </p>
         </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-lg p-6 text-center shadow-md">
+            <div
+              class="tech-badge text-white px-4 py-2 rounded-full text-sm font-medium mb-3 inline-block"
+            >
+              Frontend
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">Next.js</h3>
+            <p class="text-gray-600 text-sm">
+              React-based full-stack framework
+            </p>
+          </div>
+          <div class="bg-white rounded-lg p-6 text-center shadow-md">
+            <div
+              class="tech-badge text-white px-4 py-2 rounded-full text-sm font-medium mb-3 inline-block"
+            >
+              Styling
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">Tailwind CSS</h3>
+            <p class="text-gray-600 text-sm">Utility-first CSS framework</p>
+          </div>
+          <div class="bg-white rounded-lg p-6 text-center shadow-md">
+            <div
+              class="tech-badge text-white px-4 py-2 rounded-full text-sm font-medium mb-3 inline-block"
+            >
+              Database
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">MySQL + Prisma</h3>
+            <p class="text-gray-600 text-sm">
+              Reliable database with modern ORM
+            </p>
+          </div>
+          <div class="bg-white rounded-lg p-6 text-center shadow-md">
+            <div
+              class="tech-badge text-white px-4 py-2 rounded-full text-sm font-medium mb-3 inline-block"
+            >
+              Payments
+            </div>
+            <h3 class="font-semibold text-gray-800 mb-2">Razorpay</h3>
+            <p class="text-gray-600 text-sm">Secure payment processing</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Timeline -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Development Timeline</h2>
-                <p class="text-lg text-gray-600">6-8 week development schedule</p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="space-y-8">
-                    <div class="timeline-item flex items-start space-x-4">
-                        <div class="timeline-dot bg-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
-                            <span class="text-white text-sm font-bold">1</span>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Weeks 1-2: Blog Management System</h3>
-                            <p class="text-gray-600 mb-3">Complete blog functionality with admin dashboard, editor, and content management</p>
-                            <div class="bg-blue-50 px-4 py-2 rounded-lg inline-block">
-                                <span class="text-blue-700 font-medium">35-40 hours</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item flex items-start space-x-4">
-                        <div class="timeline-dot bg-green-500 w-8 h-8 rounded-full flex items-center justify-center">
-                            <span class="text-white text-sm font-bold">2</span>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Weeks 3-4: Class Scheduling System</h3>
-                            <p class="text-gray-600 mb-3">Interactive calendar, registration system, and automated reminders</p>
-                            <div class="bg-green-50 px-4 py-2 rounded-lg inline-block">
-                                <span class="text-green-700 font-medium">40-45 hours</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item flex items-start space-x-4">
-                        <div class="timeline-dot bg-purple-500 w-8 h-8 rounded-full flex items-center justify-center">
-                            <span class="text-white text-sm font-bold">3</span>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Weeks 4-6: PDF Sales & Payment Integration</h3>
-                            <p class="text-gray-600 mb-3">Razorpay integration, secure downloads, and purchase management</p>
-                            <div class="bg-purple-50 px-4 py-2 rounded-lg inline-block">
-                                <span class="text-purple-700 font-medium">45-50 hours</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item flex items-start space-x-4">
-                        <div class="timeline-dot bg-gray-500 w-8 h-8 rounded-full flex items-center justify-center">
-                            <span class="text-white text-sm font-bold">4</span>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Weeks 6-8: Testing & Deployment</h3>
-                            <p class="text-gray-600 mb-3">Quality assurance, bug fixes, hosting setup, and final deployment</p>
-                            <div class="bg-gray-50 px-4 py-2 rounded-lg inline-block">
-                                <span class="text-gray-700 font-medium">15-20 hours</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-gray-800 mb-4">
+            Development Timeline
+          </h2>
+          <p class="text-lg text-gray-600">6-8 week development schedule</p>
         </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="space-y-8">
+            <div class="timeline-item flex items-start space-x-4">
+              <div
+                class="timeline-dot bg-blue-500 w-8 h-8 rounded-full flex items-center justify-center"
+              >
+                <span class="text-white text-sm font-bold">1</span>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Weeks 1-2: Blog Management System
+                </h3>
+                <p class="text-gray-600 mb-3">
+                  Complete blog functionality with admin dashboard, editor, and
+                  content management
+                </p>
+                <div class="bg-blue-50 px-4 py-2 rounded-lg inline-block">
+                  <span class="text-blue-700 font-medium">35-40 hours</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item flex items-start space-x-4">
+              <div
+                class="timeline-dot bg-green-500 w-8 h-8 rounded-full flex items-center justify-center"
+              >
+                <span class="text-white text-sm font-bold">2</span>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Weeks 3-4: Class Scheduling System
+                </h3>
+                <p class="text-gray-600 mb-3">
+                  Interactive calendar, registration system, and automated
+                  reminders
+                </p>
+                <div class="bg-green-50 px-4 py-2 rounded-lg inline-block">
+                  <span class="text-green-700 font-medium">40-45 hours</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item flex items-start space-x-4">
+              <div
+                class="timeline-dot bg-purple-500 w-8 h-8 rounded-full flex items-center justify-center"
+              >
+                <span class="text-white text-sm font-bold">3</span>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Weeks 4-6: PDF Sales & Payment Integration
+                </h3>
+                <p class="text-gray-600 mb-3">
+                  Razorpay integration, secure downloads, and purchase
+                  management
+                </p>
+                <div class="bg-purple-50 px-4 py-2 rounded-lg inline-block">
+                  <span class="text-purple-700 font-medium">45-50 hours</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item flex items-start space-x-4">
+              <div
+                class="timeline-dot bg-gray-500 w-8 h-8 rounded-full flex items-center justify-center"
+              >
+                <span class="text-white text-sm font-bold">4</span>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                  Weeks 6-8: Testing & Deployment
+                </h3>
+                <p class="text-gray-600 mb-3">
+                  Quality assurance, bug fixes, hosting setup, and final
+                  deployment
+                </p>
+                <div class="bg-gray-50 px-4 py-2 rounded-lg inline-block">
+                  <span class="text-gray-700 font-medium">15-20 hours</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Note Section - Add this AFTER the Project Summary section and BEFORE the Footer -->
+    <section
+      class="py-12 bg-gradient-to-r from-amber-50 to-orange-50 border-t-4 border-amber-400"
+    >
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <div
+            class="bg-white rounded-xl shadow-lg border-l-4 border-amber-500 p-8"
+          >
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0">
+                <div
+                  class="bg-amber-100 w-12 h-12 rounded-full flex items-center justify-center"
+                >
+                  <svg
+                    class="w-6 h-6 text-amber-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                  ⚠️ Important Note: Additional Features
+                </h3>
+                <div
+                  class="bg-gradient-to-r from-amber-100 to-orange-100 rounded-lg p-6 mb-4"
+                >
+                  <p class="text-gray-800 font-semibold text-lg mb-3">
+                    Any additional features beyond the core modules may require:
+                  </p>
+                  <div class="grid md:grid-cols-2 gap-4">
+                    <div class="space-y-2">
+                      <div class="flex items-center space-x-2">
+                        <span class="text-red-500 font-bold">⏱️</span>
+                        <span class="text-gray-700 font-medium"
+                          >Extended Development Time</span
+                        >
+                      </div>
+                      <div class="flex items-center space-x-2">
+                        <span class="text-blue-500 font-bold">🚀</span>
+                        <span class="text-gray-700 font-medium"
+                          >Advanced Technologies</span
+                        >
+                      </div>
+                    </div>
+                    <div class="space-y-2">
+                      <div class="flex items-center space-x-2">
+                        <span class="text-green-500 font-bold">💰</span>
+                        <span class="text-gray-700 font-medium"
+                          >Additional Investment</span
+                        >
+                      </div>
+                      <div class="flex items-center space-x-2">
+                        <span class="text-purple-500 font-bold">🔧</span>
+                        <span class="text-gray-700 font-medium"
+                          >Specialized Expertise</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                  <p class="text-gray-700 text-sm leading-relaxed">
+                    <strong>Examples of additional features:</strong> Advanced
+                    analytics, AI integration, custom APIs, third-party
+                    integrations, advanced user roles, real-time notifications,
+                    or complex automation workflows.
+                  </p>
+                </div>
+
+                <div
+                  class="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200"
+                >
+                  <p class="text-blue-800 font-medium text-center">
+                    💡
+                    <strong
+                      >Let's discuss any additional requirements upfront</strong
+                    >
+                    to provide accurate timelines and estimates.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Project Summary -->
     <section class="py-16 bg-gray-900 text-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-                <div class="pricing-card rounded-2xl p-8 text-center">
-                    <h2 class="text-3xl font-bold mb-6">Project Summary</h2>
-                    <div class="grid md:grid-cols-2 gap-8 text-left">
-                        <div>
-                            <h3 class="text-xl font-semibold mb-4 text-blue-300">Total Development Time</h3>
-                            <p class="text-3xl font-bold mb-2">135-155 Hours</p>
-                            <p class="text-gray-300 mb-6">Includes thorough testing and quality assurance</p>
-                            
-                            <h3 class="text-xl font-semibold mb-4 text-green-300">Key Features</h3>
-                            <ul class="space-y-2 text-gray-300">
-                                <li>• Complete Blog Management System</li>
-                                <li>• Interactive Class Scheduling</li>
-                                <li>• Secure Payment Integration</li>
-                                <li>• Mobile-Responsive Design</li>
-                                <li>• SEO Optimization</li>
-                                <li>• Admin Dashboard</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold mb-4 text-purple-300">Timeline</h3>
-                            <p class="text-2xl font-bold mb-2">6-8 Weeks</p>
-                            <p class="text-gray-300 mb-6">From development start to deployment</p>
-                            
-                            <h3 class="text-xl font-semibold mb-4 text-yellow-300">Deliverables</h3>
-                            <ul class="space-y-2 text-gray-300">
-                                <li>• Fully functional website</li>
-                                <li>• Admin training & documentation</li>
-                                <li>• Mobile & desktop optimization</li>
-                                <li>• SSL security setup</li>
-                                <li>• Payment gateway configuration</li>
-                                <li>• 30-day support included</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8 pt-8 border-t border-gray-700">
-                        <p class="text-lg text-gray-300">Ready to transform your digital presence with a professional, feature-rich website?</p>
-                    </div>
-                </div>
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+          <div class="pricing-card rounded-2xl p-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Project Summary</h2>
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+              <div>
+                <h3 class="text-xl font-semibold mb-4 text-blue-300">
+                  Total Development Time
+                </h3>
+                <p class="text-3xl font-bold mb-2">135-155 Hours</p>
+                <p class="text-gray-300 mb-6">
+                  Includes thorough testing and quality assurance
+                </p>
+
+                <h3 class="text-xl font-semibold mb-4 text-green-300">
+                  Key Features
+                </h3>
+                <ul class="space-y-2 text-gray-300">
+                  <li>• Complete Blog Management System</li>
+                  <li>• Interactive Class Scheduling</li>
+                  <li>• Secure Payment Integration</li>
+                  <li>• Mobile-Responsive Design</li>
+                  <li>• SEO Optimization</li>
+                  <li>• Admin Dashboard</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-4 text-purple-300">
+                  Timeline
+                </h3>
+                <p class="text-2xl font-bold mb-2">6-8 Weeks</p>
+                <p class="text-gray-300 mb-6">
+                  From development start to deployment
+                </p>
+
+                <h3 class="text-xl font-semibold mb-4 text-yellow-300">
+                  Deliverables
+                </h3>
+                <ul class="space-y-2 text-gray-300">
+                  <li>• Fully functional website</li>
+                  <li>• Admin training & documentation</li>
+                  <li>• Mobile & desktop optimization</li>
+                  <li>• SSL security setup</li>
+                  <li>• Payment gateway configuration</li>
+                  <li>• 30-day support included</li>
+                </ul>
+              </div>
             </div>
+
+            <div class="mt-8 pt-8 border-t border-gray-700">
+              <p class="text-lg text-gray-300">
+                Ready to transform your digital presence with a professional,
+                feature-rich website?
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-gray-400">This proposal is valid for 30 days. All estimates include comprehensive testing and deployment.</p>
-        </div>
+      <div class="container mx-auto px-6 text-center">
+        <p class="text-gray-400">
+          This proposal is valid for 30 days. All estimates include
+          comprehensive testing and deployment.
+        </p>
+      </div>
     </footer>
 
     <script>
-        // Add smooth scrolling and animation effects
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate feature cards on scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
+      // Add smooth scrolling and animation effects
+      document.addEventListener("DOMContentLoaded", function () {
+        // Animate feature cards on scroll
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
 
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+            }
+          });
+        }, observerOptions);
 
-            // Initially hide elements
-            document.querySelectorAll('.feature-card, .timeline-item').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(el);
-            });
+        // Initially hide elements
+        document
+          .querySelectorAll(".feature-card, .timeline-item")
+          .forEach((el) => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(20px)";
+            el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+            observer.observe(el);
+          });
 
-            // Add stagger effect to timeline items
-            document.querySelectorAll('.timeline-item').forEach((item, index) => {
-                setTimeout(() => {
-                    item.style.opacity = '1';
-                    item.style.transform = 'translateY(0)';
-                }, index * 200);
-            });
+        // Add stagger effect to timeline items
+        document.querySelectorAll(".timeline-item").forEach((item, index) => {
+          setTimeout(() => {
+            item.style.opacity = "1";
+            item.style.transform = "translateY(0)";
+          }, index * 200);
         });
+      });
     </script>
-</body>
+  </body>
 </html>
